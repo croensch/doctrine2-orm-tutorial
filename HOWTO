@@ -1,0 +1,15 @@
+# create user, product and bug
+php create_user.php one
+php create_product.php skynet
+php create_bug.php 1 1 1
+
+# list bugs: shows user twice
+php list_bugs.php
+
+# nuke user from db
+sqlite3 db.sqlite
+DELETE FROM users WHERE id = 1;
+.exit
+
+# list bugs: shows ? only once
+php list_bugs.php
