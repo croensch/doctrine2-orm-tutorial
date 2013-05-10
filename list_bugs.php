@@ -18,7 +18,7 @@ foreach($bugs AS $bug) {
     try {
         echo "    Assigned to: ".$bug->getEngineer()->getName()."\n";
     } catch (\Doctrine\ORM\EntityNotFoundException $e)  {
-        echo "    Assigned to: ?";
+        echo "    Assigned to: ?\n";
     }
     foreach($bug->getProducts() AS $product) {
         echo "    Platform: ".$product->getName()."\n";
