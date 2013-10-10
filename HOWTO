@@ -1,0 +1,7 @@
+# create user, product and licence
+php create_user.php one
+php create_product.php skynet
+php create_licence.php 1 1 13.37
+
+# list licences: shows user and licence
+php list_licences.php

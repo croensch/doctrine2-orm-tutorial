@@ -31,6 +31,12 @@ class User
      */
     protected $assignedBugs = null;
 
+    /**
+     * @OneToMany(targetEntity="Licence", mappedBy="user")
+     * @var Licence[]
+     */
+    protected $licences;
+
     public function __construct()
     {
         $this->reportedBugs = new ArrayCollection();
@@ -60,5 +66,10 @@ class User
     public function assignedToBug($bug)
     {
         $this->assignedBugs[] = $bug;
+    }
+
+    public function getLicences()
+    {
+        return $this->licences;
     }
 }
